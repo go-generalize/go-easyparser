@@ -1,4 +1,4 @@
-package parser
+package easyparser
 
 import (
 	"go/token"

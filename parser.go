@@ -1,5 +1,5 @@
-// Package parser provides a Go module parser for TypeScript AST
-package parser
+// package easyparser provides a Go module parser for TypeScript AST
+package easyparser
 
 import (
 	"fmt"

@@ -23,6 +23,8 @@ type Parser struct {
 
 	Filter   func(opt *FilterOpt) bool
 	Replacer func(t types.Type) tstypes.Type
+	// ForceMapNonNullable provides backward compatibility to interpret map as non-nullable
+	ForceMapNonNullable bool
 }
 
 func getPackagePath(dir string) (root string, pkg string, err error) {
@@ -288,9 +290,18 @@ func (p *pkgParser) parseMap(u *types.Map) tstypes.Type {
 		panic(keyType.String() + " cannot be used as key")
 	}
 
-	return &tstypes.Map{
-		Key:   keyType,
-		Value: p.parseType(u.Elem(), true),
+	if p.ForceMapNonNullable {
+		return &tstypes.Map{
+			Key:   keyType,
+			Value: p.parseType(u.Elem(), true),
+		}
+	}
+
+	return &tstypes.Nullable{
+		Inner: &tstypes.Map{
+			Key:   keyType,
+			Value: p.parseType(u.Elem(), true),
+		},
 	}
 }
 

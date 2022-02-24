@@ -217,18 +217,20 @@ var AllExportedType = map[string]tstypes.Type{
 			},
 			"Map": {
 				RawName: "Map",
-				Type: &tstypes.Map{
-					Key: &tstypes.String{},
-					Value: &tstypes.String{
-						Common: tstypes.Common{
-							PkgName:  "main",
-							Position: testutil.ParsePositionString("testdata/success/base/main.go:13:6"),
-						},
-						Name: "github.com/go-generalize/go-easyparser/testdata/success/base.Status",
-						Enum: []string{"Failure", "OK"},
-						RawEnum: []tstypes.RawStringEnumCandidate{
-							{Key: "Failure", Value: "Failure"},
-							{Key: "OK", Value: "OK"},
+				Type: &tstypes.Nullable{
+					Inner: &tstypes.Map{
+						Key: &tstypes.String{},
+						Value: &tstypes.String{
+							Common: tstypes.Common{
+								PkgName:  "main",
+								Position: testutil.ParsePositionString("testdata/success/base/main.go:13:6"),
+							},
+							Name: "github.com/go-generalize/go-easyparser/testdata/success/base.Status",
+							Enum: []string{"Failure", "OK"},
+							RawEnum: []tstypes.RawStringEnumCandidate{
+								{Key: "Failure", Value: "Failure"},
+								{Key: "OK", Value: "OK"},
+							},
 						},
 					},
 				},

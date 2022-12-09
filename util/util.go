@@ -1,4 +1,4 @@
-// Package util is a helper library for go2ts
+// Package util is a helper library for easyparser
 package util
 
 import (

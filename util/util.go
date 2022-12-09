@@ -58,8 +58,8 @@ func GetGoModule(goMod string) (string, error) {
 	return f.Module.Mod.Path, nil
 }
 
-// SplitPackegeStruct - package.structを分割
-func SplitPackegeStruct(s string) (string, string) {
+// SplitPackageStruct - package.structを分割
+func SplitPackageStruct(s string) (string, string) {
 	idx := strings.LastIndex(s, ".")
 
 	return s[:idx], s[idx+1:]

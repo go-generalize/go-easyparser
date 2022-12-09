@@ -202,6 +202,10 @@ type pkgParser struct {
 }
 
 func (p *pkgParser) parseNamed(t *types.Named, dep bool) tstypes.Type {
+	if t.Obj().Type().Underlying().String() == "struct{wall uint64; ext int64; loc *time.Location}" {
+		return &tstypes.Date{}
+	}
+
 	if t.String() == "time.Time" {
 		return &tstypes.Date{}
 	}

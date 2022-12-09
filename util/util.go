@@ -4,7 +4,6 @@ package util
 import (
 	"crypto/sha1"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -42,7 +41,7 @@ func GetGoModPath(in string) (string, error) {
 
 // GetGoModule - Goのルートパッケージ名をgo.modから取得する
 func GetGoModule(goMod string) (string, error) {
-	d, err := ioutil.ReadFile(goMod)
+	d, err := os.ReadFile(goMod)
 	if err != nil {
 		return "", err
 	}

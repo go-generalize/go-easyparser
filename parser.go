@@ -1,4 +1,4 @@
-// package easyparser provides a Go module parser for TypeScript AST
+// Package easyparser provides a Go module parser for AST
 package easyparser
 
 import (
@@ -305,7 +305,7 @@ func (p *pkgParser) parseMap(u *types.Map) tstypes.Type {
 	}
 }
 
-func (p *pkgParser) parseInterface(u *types.Interface) tstypes.Type {
+func (p *pkgParser) parseInterface(_ *types.Interface) tstypes.Type {
 	return &tstypes.Any{}
 }
 

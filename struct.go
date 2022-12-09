@@ -1,4 +1,4 @@
-// package easyparser provides a Go module parser for TypeScript AST
+// Package easyparser provides a Go module parser for AST
 package easyparser
 
 import (

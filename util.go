@@ -9,7 +9,7 @@ import (
 )
 
 func visitErrors(pkgs []*packages.Package) error {
-	errs := []string{}
+	errs := make([]string, 0)
 	packages.Visit(pkgs, nil, func(pkg *packages.Package) {
 		for i := range pkg.Errors {
 			errs = append(errs, pkg.Errors[i].Error())

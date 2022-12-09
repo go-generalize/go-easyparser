@@ -31,7 +31,7 @@ func (c *Common) GetPosition() *token.Position {
 	return c.Position
 }
 
-// Type interface represents all TypeScript types handled by go2ts
+// Type interface represents all TypeScript types handled by go-easyparser
 type Type interface {
 	SetPackageName(pkgName string)
 	GetPackageName() string

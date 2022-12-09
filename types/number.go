@@ -53,7 +53,7 @@ func (e *Number) AddCandidates(key string, v interface{}) {
 	})
 }
 
-// SetName sets a alternative name
+// SetName sets an alternative name
 func (e *Number) SetName(name string) {
 	e.Name = name
 }

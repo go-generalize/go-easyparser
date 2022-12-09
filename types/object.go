@@ -3,7 +3,7 @@ package types
 
 import "go/token"
 
-// ObjectEntry is an field in objects
+// ObjectEntry is a field in objects
 type ObjectEntry struct {
 	RawName    string
 	RawTag     string
@@ -30,7 +30,7 @@ func (n *Object) UsedAsMapKey() bool {
 	return false
 }
 
-// SetName sets a alternative name
+// SetName sets an alternative name
 func (n *Object) SetName(name string) {
 	n.Name = name
 }

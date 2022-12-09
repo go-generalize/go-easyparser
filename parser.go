@@ -1,4 +1,4 @@
-// package easyparser provides a Go module parser for TypeScript AST
+// Package easyparser provides a Go module parser for AST
 package easyparser
 
 import (
@@ -9,7 +9,7 @@ import (
 	"reflect"
 
 	tstypes "github.com/go-generalize/go-easyparser/types"
-	"github.com/go-generalize/go-easyparser/util"
+	"github.com/go-utils/gopackages"
 	"golang.org/x/tools/go/packages"
 )
 
@@ -28,14 +28,14 @@ type Parser struct {
 }
 
 func getPackagePath(dir string) (root string, pkg string, err error) {
-	goModPath, err := util.GetGoModPath(dir)
+	goModPath, err := gopackages.GetGoModPath(dir)
 
 	if err != nil {
 		return "", "", err
 	}
 	goModDir := filepath.Dir(goModPath)
 
-	mod, err := util.GetGoModule(goModPath)
+	mod, err := gopackages.GetGoModule(goModPath)
 
 	if err != nil {
 		return "", "", err
@@ -309,7 +309,7 @@ func (p *pkgParser) parseMap(u *types.Map) tstypes.Type {
 	}
 }
 
-func (p *pkgParser) parseInterface(u *types.Interface) tstypes.Type {
+func (p *pkgParser) parseInterface(_ *types.Interface) tstypes.Type {
 	return &tstypes.Any{}
 }
 

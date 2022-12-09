@@ -47,7 +47,7 @@ func (n *String) AddCandidates(key string, v interface{}) {
 	}
 }
 
-// SetName sets a alternative name
+// SetName sets an alternative name
 func (n *String) SetName(name string) {
 	n.Name = name
 }

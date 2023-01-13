@@ -22,3 +22,17 @@ func visitErrors(pkgs []*packages.Package) error {
 
 	return errors.New(strings.Join(errs, "\n"))
 }
+
+// SplitPackageStruct - split package.struct
+func SplitPackageStruct(s string) (string, string) {
+	idx := strings.LastIndex(s, ".")
+
+	return s[:idx], s[idx+1:]
+}
+
+// GetPackageNameFromPath - get package name from last element of path
+func GetPackageNameFromPath(s string) string {
+	arr := strings.Split(s, "/")
+
+	return arr[len(arr)-1]
+}

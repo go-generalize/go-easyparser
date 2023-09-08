@@ -3,7 +3,7 @@ module github.com/go-generalize/go-easyparser
 go 1.17
 
 require (
-	github.com/go-utils/gopackages v0.0.0-20210218102646-e7d1f0008968
+	github.com/go-utils/gopackages v0.1.0
 	github.com/google/go-cmp v0.5.9
 	golang.org/x/tools v0.13.0
 )

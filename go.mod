@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/go-utils/gopackages v0.1.0
-	github.com/google/go-cmp v0.5.9
+	github.com/google/go-cmp v0.6.0
 	golang.org/x/tools v0.13.0
 )
 

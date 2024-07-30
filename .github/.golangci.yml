@@ -45,6 +45,8 @@ linters:
     - lll
     # スペルチェック
     - misspell
+    # linter
+    - revive
     # 不要な型変換を検出
     - unconvert
     # 未使用のものを検出

@@ -1,6 +1,6 @@
 module github.com/go-generalize/go-easyparser
 
-go 1.17
+go 1.22
 
 require (
 	github.com/go-utils/gopackages v0.1.0

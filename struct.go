@@ -37,7 +37,7 @@ func (p *pkgParser) parseStruct(strct *types.Struct) tstypes.Type {
 		}
 		optional := len(jsonTag) >= 2 && jsonTag[1] == jsonTagOmitempty
 
-		if field == "-" {
+		if field == "-" && !p.IgnoreOmittedJSONField {
 			continue
 		}
 

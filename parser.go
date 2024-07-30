@@ -25,8 +25,8 @@ type Parser struct {
 	Replacer func(t types.Type) tstypes.Type
 	// ForceMapNonNullable provides backward compatibility to interpret map as non-nullable
 	ForceMapNonNullable bool
-	// IgnoreOmittedJsonField is a flag to ignore omitted json fields
-	IgnoreOmittedJsonField bool
+	// IgnoreOmittedJSONField is a flag to ignore omitted json fields
+	IgnoreOmittedJSONField bool
 }
 
 func getPackagePath(dir string) (root string, pkg string, err error) {

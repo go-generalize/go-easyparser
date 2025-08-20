@@ -41,7 +41,7 @@ var AllExportedType = map[string]tstypes.Type{
 	"github.com/go-generalize/go-easyparser/testdata/success/base.foo": &tstypes.Object{
 		Common: tstypes.Common{
 			PkgName:  "main",
-			Position: testutil.ParsePositionString("testdata/success/base/main.go:48:6"),
+			Position: testutil.ParsePositionString("testdata/success/base/main.go:50:6"),
 		},
 		Name: "github.com/go-generalize/go-easyparser/testdata/success/base.foo",
 		Entries: map[string]tstypes.ObjectEntry{
@@ -50,7 +50,7 @@ var AllExportedType = map[string]tstypes.Type{
 				Type: &tstypes.Number{
 					RawType: types.Int,
 				},
-				Position: testutil.ParsePositionString("testdata/success/base/main.go:49:2"),
+				Position: testutil.ParsePositionString("testdata/success/base/main.go:51:2"),
 			},
 		},
 	},
@@ -73,7 +73,7 @@ var AllExportedType = map[string]tstypes.Type{
 	"github.com/go-generalize/go-easyparser/testdata/success/base.Unexported": &tstypes.Object{
 		Common: tstypes.Common{
 			PkgName:  "main",
-			Position: testutil.ParsePositionString("testdata/success/base/main.go:52:6"),
+			Position: testutil.ParsePositionString("testdata/success/base/main.go:54:6"),
 		},
 		Name: "github.com/go-generalize/go-easyparser/testdata/success/base.Unexported",
 		Entries: map[string]tstypes.ObjectEntry{
@@ -82,7 +82,7 @@ var AllExportedType = map[string]tstypes.Type{
 				Type: &tstypes.Number{
 					RawType: types.Int,
 				},
-				Position: testutil.ParsePositionString("testdata/success/base/main.go:53:2"),
+				Position: testutil.ParsePositionString("testdata/success/base/main.go:55:2"),
 			},
 		},
 	},
@@ -244,7 +244,7 @@ var AllExportedType = map[string]tstypes.Type{
 				Type: &tstypes.Object{
 					Common: tstypes.Common{
 						PkgName:  "main",
-						Position: testutil.ParsePositionString("testdata/success/base/main.go:48:6"),
+						Position: testutil.ParsePositionString("testdata/success/base/main.go:50:6"),
 					},
 					Name: "github.com/go-generalize/go-easyparser/testdata/success/base.foo",
 					Entries: map[string]tstypes.ObjectEntry{
@@ -253,7 +253,7 @@ var AllExportedType = map[string]tstypes.Type{
 							Type: &tstypes.Number{
 								RawType: types.Int,
 							},
-							Position: testutil.ParsePositionString("testdata/success/base/main.go:49:2"),
+							Position: testutil.ParsePositionString("testdata/success/base/main.go:51:2"),
 						},
 					},
 				},
@@ -265,7 +265,7 @@ var AllExportedType = map[string]tstypes.Type{
 				Type: &tstypes.Object{
 					Common: tstypes.Common{
 						PkgName:  "main",
-						Position: testutil.ParsePositionString("testdata/success/base/main.go:52:6"),
+						Position: testutil.ParsePositionString("testdata/success/base/main.go:54:6"),
 					},
 					Name: "github.com/go-generalize/go-easyparser/testdata/success/base.Unexported",
 					Entries: map[string]tstypes.ObjectEntry{
@@ -274,7 +274,7 @@ var AllExportedType = map[string]tstypes.Type{
 							Type: &tstypes.Number{
 								RawType: types.Int,
 							},
-							Position: testutil.ParsePositionString("testdata/success/base/main.go:53:2"),
+							Position: testutil.ParsePositionString("testdata/success/base/main.go:55:2"),
 						},
 					},
 				},
@@ -288,6 +288,14 @@ var AllExportedType = map[string]tstypes.Type{
 				},
 				FieldIndex: 13,
 				Position:   testutil.ParsePositionString("testdata/success/base/main.go:45:2"),
+			},
+			"Alias": {
+				RawName: "Alias",
+				Type: &tstypes.Number{
+					RawType: types.Int,
+				},
+				FieldIndex: 14,
+				Position:   testutil.ParsePositionString("testdata/success/base/main.go:47:2"),
 			},
 		},
 	},

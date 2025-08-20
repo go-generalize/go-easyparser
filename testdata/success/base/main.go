@@ -43,6 +43,8 @@ type Data struct {
 	Hidden int `json:"-"`
 
 	ByteSlice []byte
+
+	Alias AliasInt
 }
 
 type foo struct {
@@ -52,3 +54,5 @@ type foo struct {
 type Unexported struct {
 	Data int
 }
+
+type AliasInt = int

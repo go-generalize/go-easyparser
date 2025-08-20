@@ -200,7 +200,7 @@ var NormalType = map[string]tstypes.Type{
 							Type: &tstypes.Number{
 								RawType: types.Int,
 							},
-							Position: testutil.ParsePositionString("testdata/success/base/main.go:49:2"),
+							Position: testutil.ParsePositionString("testdata/success/base/main.go:51:2"),
 						},
 					},
 				},
@@ -216,7 +216,7 @@ var NormalType = map[string]tstypes.Type{
 							Type: &tstypes.Number{
 								RawType: types.Int,
 							},
-							Position: testutil.ParsePositionString("testdata/success/base/main.go:53:2"),
+							Position: testutil.ParsePositionString("testdata/success/base/main.go:55:2"),
 						},
 					},
 				},
@@ -230,6 +230,14 @@ var NormalType = map[string]tstypes.Type{
 				},
 				FieldIndex: 13,
 				Position:   testutil.ParsePositionString("testdata/success/base/main.go:45:2"),
+			},
+			"Alias": {
+				RawName: "Alias",
+				Type: &tstypes.Number{
+					RawType: types.Int,
+				},
+				FieldIndex: 14,
+				Position:   testutil.ParsePositionString("testdata/success/base/main.go:47:2"),
 			},
 		},
 	},

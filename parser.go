@@ -315,6 +315,10 @@ func (p *pkgParser) parseInterface(_ *types.Interface) tstypes.Type {
 	return &tstypes.Any{}
 }
 
+func (p *pkgParser) parseAlias(u *types.Alias, dep bool) tstypes.Type {
+	return p.parseType(u.Underlying(), dep)
+}
+
 func (p *pkgParser) parseType(u types.Type, dep bool) tstypes.Type {
 	var typ tstypes.Type
 	if p.Replacer != nil {
@@ -342,6 +346,8 @@ func (p *pkgParser) parseType(u types.Type, dep bool) tstypes.Type {
 		typ = p.parseMap(u)
 	case *types.Interface:
 		typ = p.parseInterface(u)
+	case *types.Alias:
+		typ = p.parseAlias(u, dep)
 	default:
 		panic("unsupported named type: " + reflect.TypeOf(u).String())
 	}

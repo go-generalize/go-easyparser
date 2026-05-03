@@ -7,6 +7,7 @@ import (
 	"strings"
 	"testing"
 
+	alias "github.com/go-generalize/go-easyparser/testdata/alias"
 	"github.com/go-generalize/go-easyparser/testdata/conflict"
 	"github.com/go-generalize/go-easyparser/testdata/recursive"
 	"github.com/go-generalize/go-easyparser/testdata/replace"
@@ -117,6 +118,15 @@ func TestParser_Parse(t *testing.T) {
 				},
 			},
 			wantRes: replace.Type,
+			wantErr: false,
+		},
+		{
+			name: "alias",
+			fields: fields{
+				pkgs:   parse(t, "./testdata/alias/base"),
+				Filter: All,
+			},
+			wantRes: alias.Type,
 			wantErr: false,
 		},
 	}

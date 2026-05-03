@@ -342,8 +342,18 @@ func (p *pkgParser) parseType(u types.Type, dep bool) tstypes.Type {
 		typ = p.parseMap(u)
 	case *types.Interface:
 		typ = p.parseInterface(u)
+	case *types.Alias:
+		ua := types.Unalias(u)
+		if ua == nil {
+			panic("incomplete alias: " + u.String())
+		}
+		typ = p.parseType(ua, dep)
+	case *types.Signature:
+		typ = &tstypes.Any{}
+	case *types.TypeParam:
+		typ = &tstypes.Any{}
 	default:
-		panic("unsupported named type: " + reflect.TypeOf(u).String())
+		panic("unsupported type: " + reflect.TypeOf(u).String())
 	}
 
 	return typ
